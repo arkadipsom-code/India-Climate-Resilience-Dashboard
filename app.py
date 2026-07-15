@@ -184,3 +184,62 @@ with col2:
         use_container_width=True
     )
 
+
+
+    st.divider()
+    st.markdown("### 🔍 Methodology & Analytical Framework")
+    st.caption("Detailed breakdown of index calculation formulas, weights, and categorical tier parameters utilized in this simulation.")
+
+    
+    tab1, tab2, tab3 = st.tabs(["📊 Score Tier Parameters", "🧮 Sub-Index Formulas", "📈 Simulation Forecast Logic"])
+
+    with tab1:
+        st.write("The **Climate Resilience Score** is categorized into four distinct performance bands based on absolute scaled scores:")
+        
+        
+        tier_data = {
+            "Resilience Category": ["🟢 High", "🟡 Moderate", "🟠 Vulnerable", "🔴 Critical"],
+            "Score Threshold": ["≥ 80", "60 to 79.9", "40 to 59.9", "< 40"],
+            "Strategic Assessment": [
+                "Solid defensive urban infrastructure metrics. Focus on preventative optimization.",
+                "Balanced framework with moderate systemic gaps. Target localized interventions.",
+                "Significant risk vectors present. Requires active capital deployment.",
+                "Severe structural vulnerability. Immediate emergency infrastructure adaptation required."
+            ]
+        }
+        st.table(pd.DataFrame(tier_data))
+
+    with tab2:
+        st.write("All raw indicators are standardized dynamically using a global **Min-Max Scaler (0-100)** before calculation. The indicators are combined via the following structural equations:")
+        
+        
+        st.markdown("""
+        * **Consolidated Climate Resilience Score:**
+          $$\\text{Resilience Score} = 0.25 \\times (100 - \\text{Heatwave Risk}) + 0.25 \\times (100 - \\text{Flood Risk}) + 0.20 \\times (100 - \\text{Water Stress}) + 0.15 \\times (100 - \\text{Population Pressure}) + 0.15 \\times \\text{Infrastructure Readiness}$$
+        
+        ---
+        
+        * **Heatwave Risk Index:**
+          $$\\text{Heatwave Risk} = (\\text{Summer Temp} \\times 0.4) + (\\text{Heatwave Days} \\times 0.4) + (\\text{Population Density} \\times 0.2)$$
+          
+        * **Flood Risk Index:**
+          $$\\text{Flood Risk} = (\\text{Annual Rainfall} \\times 0.3) + (\\text{Extreme Rainfall Days} \\times 0.5) + (\\text{Inverted Road Density} \\times 0.2)$$
+          
+        * **Water Stress Index:**
+          $$\\text{Water Stress} = (\\text{Groundwater Depletion} \\times 0.5) + (\\text{Water Demand-Supply Ratio} \\times 0.5)$$
+          
+        * **Population Pressure Index:**
+          $$\\text{Population Pressure} = (\\text{Population Density} \\times 0.5) + (\\text{Population Growth Rate} \\times 0.5)$$
+          
+        * **Infrastructure Readiness Index:**
+          $$\\text{Infrastructure Readiness} = (\\text{Sewage Coverage} \\times 0.4) + (\\text{Green Cover} \\times 0.3) + (\\text{Public Transport} \\times 0.3)$$
+        """)
+
+    with tab3:
+        st.write("When the simulation window scales beyond **2026**, the platform activates an empirical predictive layer:")
+        st.markdown("""
+        1. **Demographic Expansion**: Future population scales exponentially based on compound growth mechanics: 
+           $$\\text{Population}_{\\text{future}} = \\text{Population}_{\\text{current}} \\times (1 + \\text{Growth Rate})^{\\Delta \\text{Years}}$$
+        2. **Climate Metrics**: Target values for variables like *Average Summer Temperature* and *Heatwave Days* are generated using ordinary least squares (OLS) **Linear Regression** trends derived across historical decadal baselines.
+        3. **Water Stress Drift**: The baseline *Water Demand-Supply Ratio* scales dynamically, moving up in parallel with proportional population expansion vectors.
+        """)
