@@ -186,7 +186,7 @@ with col2:
 
 
 st.divider()
-st.markdown("### 🔍 Methodology & Analytical Framework")
+st.markdown("### Methodology & Analytical Framework")
 st.caption("Detailed breakdown of index calculation formulas, weights, and categorical tier parameters utilized in this simulation.")
 
     
