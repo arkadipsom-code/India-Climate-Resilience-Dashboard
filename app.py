@@ -30,7 +30,7 @@ raw_df = load_base_data()
 
 st.sidebar.markdown("### Simulation Parameters")
 target_year = st.sidebar.slider("Simulation Horizon (Year)", 2026, 2040, 2026, step=1)
-budget = st.sidebar.slider("Adaptation Fund Pool (₹ Crores)", 100, 5000, 1000, step=50)
+budget = st.sidebar.slider("Adaptation Fund Pool (₹ Crores)", 100, 20000, 1000, step=50)
 available_cities = sorted(raw_df["City"].unique())
 selected_city = st.sidebar.selectbox("Target Metropolitan Area", available_cities)
 
