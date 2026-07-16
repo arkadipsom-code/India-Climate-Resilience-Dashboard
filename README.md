@@ -10,7 +10,7 @@ An empirical analytical dashboard for quantifying long-range urban climate risk 
 
 * **Multi-Vector Risk Indexes:** Quantifies and maps Heatwave Risk, Flood Risk, Water Stress, Population Pressure, and Infrastructure Readiness scores out of 100.
 * **Predictive Simulation Engines:** Employs Ordinary Least Squares (OLS) Linear Regression models to forecast urban temperature drift and extreme weather event frequencies up to the year 2040.
-* **Algorithmic Capital Optimization:** Automatically routes user-defined adaptation fund pools (up to ₹5,000 Crores) directly to highest-priority vulnerabilities using a custom prioritization matrix.
+* **Algorithmic Capital Optimization:** Automatically routes user-defined adaptation fund pools (up to ₹20,000 Crores) directly to highest-priority vulnerabilities using a custom prioritization matrix.
 * **Native Interactive UI:** Streamlined, highly intuitive layout complete with dynamic status alerts, custom interactive visual distribution plots, and granular asset configuration dataframes.
 
 ---
