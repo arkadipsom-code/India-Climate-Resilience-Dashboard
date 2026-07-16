@@ -1,4 +1,4 @@
-# 🌐India's Climate Resilience & Strategic Capital Allocation Platform
+# India's Climate Resilience & Strategic Capital Allocation Platform
 
 An empirical analytical dashboard for quantifying long-range urban climate risk and optimizing infrastructure fund allocation across major Indian metropolitan areas. The platform simulates predictive climate trends out to the year 2040 using machine learning regressions and dynamically adjusts budget recommendations based on localized risk priorities.
 
